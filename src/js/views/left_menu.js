@@ -9,8 +9,14 @@ export default class LeftMenu {
   }
 
   _bindHtmlElements() {
-    this.runButton = this._jQueryElement.find('#run-button');
-    this.nextButton = this._jQueryElement.find('#next-button');
+    this.runButton = this._findElementById('run-button');
+    this.nextButton = this._findElementById('next-button');
+    this.stopButton = this._findElementById('stop-button');
+    this.resetButton = this._findElementById('reset-button');
+  }
+
+  _findElementById(id) {
+    return this._jQueryElement.find('#' + id);
   }
 
 }

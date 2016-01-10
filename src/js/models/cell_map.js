@@ -82,6 +82,10 @@ export default class CellMap {
     ];
   }
 
+  resetAllCells() {
+    this.forEachCell(cell => { cell.setDead(); });
+  }
+
   _updateAllCellState() {
     this.forEachCell(cell => { cell.updateState(); });
   }
