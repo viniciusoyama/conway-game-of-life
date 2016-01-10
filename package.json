@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "google-chrome build/main.html",
-    "build": "npm run build:js & npm run build:html & npm run build:css",
+    "build": "npm run build:js && npm run build:html && npm run build:css",
     "build:js": "webpack",
-    "build:html": "cp src/main.html build/main.html",
-    "build:css": "cp src/css/main.css build/css/main.css",
+    "build:html": "rsync -a src/main.html build",
+    "build:css": "rsync -a src/css build",
     "prewatch": "npm run build",
     "watch": "npm run watch:js & npm run watch:html & npm run watch:css",
     "watch:js": "webpack --watch",
