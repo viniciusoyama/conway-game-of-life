@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "google-chrome build/main.html",
-    "build": "npm run build:js & npm run build:html",
+    "build": "npm run build:js & npm run build:html & npm run build:css",
     "build:js": "webpack",
     "build:html": "cp src/main.html build/main.html",
+    "build:css": "cp src/css/main.css build/css/main.css",
     "prewatch": "npm run build",
-    "watch": "npm run watch:js & npm run watch:html",
+    "watch": "npm run watch:js & npm run watch:html & npm run watch:css",
     "watch:js": "webpack --watch",
-    "watch:html": "watch-run -p 'src/main.html' npm run build:html"
+    "watch:html": "watch-run -p 'src/main.html' npm run build:html",
+    "watch:css": "watch-run -p 'src/css/main.css' npm run build:css"
   },
   "author": "",
   "license": "ISC",
