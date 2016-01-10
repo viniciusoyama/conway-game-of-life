@@ -45,7 +45,7 @@ export default class CellMap {
     } else if (numberOfLiveNeighbours === 3) {
       cell.scheduleLiveState();
     } else {
-      cell.unscheduleStateChange();
+      cell.cancelStateChange();
     }
   }
 

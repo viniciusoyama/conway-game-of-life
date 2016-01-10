@@ -16,10 +16,6 @@ export default class Cell {
     this._isLive = !this._isLive;
   }
 
-  isDead() {
-    return !this.isLive();
-  }
-
   setDead() {
     this._isLive = false;
   }
@@ -32,7 +28,7 @@ export default class Cell {
     this._willChangeToLive = false;
   }
 
-  unscheduleStateChange() {
+  cancelStateChange() {
     this._willChangeToLive = this._isLive;
   }
 
