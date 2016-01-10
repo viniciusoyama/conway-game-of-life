@@ -1,7 +1,7 @@
 module.exports = {
   entry: "./src/js/main.js",
   output: {
-    path: __dirname + '/build/js'
+    path: __dirname + '/build/js',
     filename: "main.js"
   },
   module: {
