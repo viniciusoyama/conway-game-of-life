@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+
+    "serve": "google-chrome build/main.html",
+
     "build": "npm run build:js & npm run build:html",
     "build:js": "webpack",
     "build:html": "cp src/main.html build/main.html",
+
     "prewatch": "npm run build",
     "watch": "npm run watch:js & npm run watch:html",
     "watch:js": "webpack --watch",
