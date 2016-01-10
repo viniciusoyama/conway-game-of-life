@@ -1,10 +1,11 @@
 import $ from 'jquery';
 
+import LeftMenu from './views/left_menu';
+
 $(document).ready(function() {
-  console.log('Hello world!');
+  let leftMenu = new LeftMenu('#left-menu');
 
-  $('#run').click(function() {
-    console.log('Clicked');
+  leftMenu.runButton.click(function() {
+    console.log('clicked');
   });
-
 });

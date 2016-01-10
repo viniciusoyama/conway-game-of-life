@@ -1,0 +1,29 @@
+#left-menu {
+  float: left;
+  box-sizing: border-box;
+
+  border: 1px solid black;
+  height: 300px;
+  width: 200px;
+  padding: 10px;
+}
+
+button#run-button {
+  display: block;
+
+  margin: auto;
+}
+
+#game-screen {
+  float: left;
+  box-sizing: border-box;
+
+  border: 1px solid black;
+  border-left: 0;
+  height: 300px;
+  width: 400px;
+}
+
+.clearfix {
+  clear: both;
+}
