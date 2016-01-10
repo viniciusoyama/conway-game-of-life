@@ -9,12 +9,7 @@ export default class MenuController {
   }
 
   _setup() {
-    this._setGameMapCellListener();
     this._bindViewEvents();
-  }
-
-  _setGameMapCellListener() {
-    this.gameMap.cellListener = this;
   }
 
   _bindViewEvents() {

@@ -23,4 +23,6 @@ $(document).ready(function() {
     gameMap: gameMap
   });
 
+  gameMap.cellListener = menuController;
+
 });
