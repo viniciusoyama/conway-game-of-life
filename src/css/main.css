@@ -1,27 +1,44 @@
-#left-menu {
-  float: left;
-  box-sizing: border-box;
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
 
-  border: 1px solid black;
-  height: 300px;
+#left-menu {
+  box-sizing: border-box;
+  height: inherit;
   width: 200px;
+  border: 1px solid black;
   padding: 10px;
 }
 
-button#run-button {
+#left-menu button {
   display: block;
+  margin: 10px auto;
 
-  margin: auto;
+  cursor: pointer;
 }
 
-#game-screen {
-  float: left;
+#game-map {
+  position: relative;
   box-sizing: border-box;
+}
 
+.cell {
+  position: absolute;
+  box-sizing: border-box;
   border: 1px solid black;
-  border-left: 0;
-  height: 300px;
-  width: 400px;
+
+  cursor: pointer;
+}
+
+.cell.cell-dead {
+  background: white;
+}
+
+.cell.cell-live {
+  background: gray;
 }
 
 .clearfix {
