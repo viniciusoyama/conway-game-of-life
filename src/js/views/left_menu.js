@@ -10,6 +10,7 @@ export default class LeftMenu {
 
   _bindHtmlElements() {
     this.runButton = this._jQueryElement.find('#run-button');
+    this.nextButton = this._jQueryElement.find('#next-button');
   }
 
 }
