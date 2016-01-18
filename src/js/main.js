@@ -49,14 +49,14 @@ $(document).ready(function() {
         canvas.add(image);
         canvas.renderAll();
         var imageData = image.canvas.getContext().getImageData(0,0,canvas.width,canvas.height).data;
-
+        window.imageData = imageData
         var oficialIndex=0;
         for(var i=0; i< imageData.length; i+=4) {
           var r = imageData[i];
           var g = imageData[i+1];
           var b = imageData[i+2];
           var a = imageData[i+3];
-          var shouldPaint = (r > 150) || (g > 150) || (b > 150) || (a > 150);
+          var shouldPaint = (r < 150) || (g < 150) || (b < 150) || (a < 150);
           if (shouldPaint) {
             gameMap._cellList[oficialIndex].setAsLive();
             cellMap._cells[oficialIndex].toogleState();
